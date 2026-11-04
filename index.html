@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic website of Swarnadeep Banerjee, Ph.D. student in Mathematics at the University of Victoria.">
+  <title>Swarnadeep Banerjee | Mathematics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="site-name" href="index.html">Swarnadeep Banerjee</a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="seminars.html">Seminars</a>
+        <a href="pictures.html">Pictures</a>
+        <a href="contact.html">Contact</a>
+        <a href="beyond-mathematics.html">Beyond Mathematics</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <section class="profile-section" aria-labelledby="profile-name">
+      <div class="portrait-wrap">
+        <!-- Replace images/profile.jpg with your own photograph. -->
+        <img
+          class="portrait"
+          src="images/profile.jpg"
+          alt="Portrait of Swarnadeep Banerjee"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        >
+        <div class="portrait-placeholder" aria-hidden="true">
+          <span>Add your photograph</span>
+          <small>Save it as images/profile.jpg</small>
+        </div>
+      </div>
+
+      <div class="profile-content">
+        <h1 id="profile-name">Swarnadeep Banerjee</h1>
+        <p class="position">Ph.D. Student in Mathematics</p>
+        <p class="affiliation">University of Victoria</p>
+
+        <div class="intro-rule"></div>
+
+        <p class="intro">
+          I am a Ph.D. student in Mathematics at the University of Victoria.
+          My research interests lie in probability theory and random structures,
+          particularly random graphs and related probabilistic models.
+        </p>
+
+        <div class="quick-links" aria-label="Academic links">
+          <a class="quick-link primary-link" href="documents/cv.pdf" target="_blank" rel="noopener">
+            <span class="link-symbol" aria-hidden="true">↓</span>
+            CV (PDF)
+          </a>
+          <a class="quick-link" href="research.html">
+            <span class="link-symbol" aria-hidden="true">◇</span>
+            Research
+          </a>
+          <a class="quick-link" href="#" target="_blank" rel="noopener">
+            <span class="link-symbol" aria-hidden="true">⌑</span>
+            Google Scholar
+          </a>
+          <a class="quick-link" href="#" target="_blank" rel="noopener">
+            <span class="link-symbol" aria-hidden="true">↗</span>
+            arXiv
+          </a>
+          <a class="quick-link" href="mailto:your.email@uvic.ca">
+            <span class="link-symbol" aria-hidden="true">✉</span>
+            Email
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="lower-section">
+      <div class="research-interests">
+        <h2>Research Interests</h2>
+        <div class="heading-underline"></div>
+        <ul class="interest-list">
+          <li>Probability theory</li>
+          <li>Random graphs and combinatorial structures</li>
+          <li>Random mappings and branching processes</li>
+          <li>Limit theorems and related topics</li>
+        </ul>
+      </div>
+
+      <div class="updates-column">
+        <section class="info-panel upcoming-panel" aria-labelledby="upcoming-heading">
+          <div class="panel-heading">
+            <span class="panel-icon" aria-hidden="true">▦</span>
+            <h2 id="upcoming-heading">Upcoming Work</h2>
+          </div>
+          <ul>
+            <li>Add a short description of a forthcoming paper or preprint.</li>
+            <li>Add a current research project or work in preparation.</li>
+          </ul>
+        </section>
+
+        <section class="info-panel news-panel" aria-labelledby="news-heading">
+          <div class="panel-heading">
+            <span class="panel-icon" aria-hidden="true">◉</span>
+            <h2 id="news-heading">News</h2>
+          </div>
+          <ul>
+            <li>Add a recent academic announcement, publication or award.</li>
+            <li>Add an upcoming talk, seminar or teaching update.</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> Swarnadeep Banerjee</p>
+  </footer>
+</body>
+</html>
