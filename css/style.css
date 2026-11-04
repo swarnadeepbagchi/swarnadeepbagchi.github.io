@@ -1,0 +1,473 @@
+/* ---------------------------------------------------------
+   Academic homepage — warm cream and muted burgundy palette
+   Edit this file to change the appearance of the whole site.
+   --------------------------------------------------------- */
+
+:root {
+  --page-bg: #fbf4e8;
+  --page-bg-soft: #fff9f0;
+  --ink: #321b12;
+  --ink-soft: #594238;
+  --accent: #7b241c;
+  --accent-dark: #651b16;
+  --line: #dfc6a7;
+  --panel-green: #efedda;
+  --panel-peach: #f5e7d5;
+  --white-warm: #fffaf2;
+  --shadow: 0 8px 24px rgba(75, 43, 25, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: "Source Sans 3", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+}
+
+/* Navigation */
+
+.site-header {
+  background: rgba(255, 249, 240, 0.92);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-wrap {
+  width: min(1440px, calc(100% - 64px));
+  min-height: 86px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.site-name {
+  flex: 0 0 auto;
+  color: var(--ink);
+  text-decoration: none;
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: clamp(1.55rem, 2.1vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.main-nav a {
+  padding: 9px 13px;
+  border-radius: 9px;
+  color: var(--ink);
+  text-decoration: none;
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: var(--accent);
+  background: #f3e6d3;
+}
+
+.main-nav a.active {
+  color: var(--accent);
+  background: #f3e6d3;
+}
+
+/* Main page layout */
+
+.page-container {
+  width: min(1320px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 62px 0 52px;
+}
+
+.profile-section {
+  display: grid;
+  grid-template-columns: 310px minmax(0, 1fr);
+  align-items: center;
+  gap: 52px;
+}
+
+.portrait-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 3.55;
+  overflow: hidden;
+  border: 1px solid #ddc6a8;
+  border-radius: 16px;
+  background: #efe3d1;
+  box-shadow: var(--shadow);
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.portrait-placeholder {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--ink-soft);
+  font-family: "Crimson Pro", Georgia, serif;
+  text-align: center;
+}
+
+.portrait-placeholder small {
+  font-family: "Source Sans 3", Arial, sans-serif;
+  font-size: 0.85rem;
+}
+
+.profile-content h1 {
+  margin: 0 0 2px;
+  color: var(--ink);
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.position,
+.affiliation {
+  margin: 2px 0;
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  line-height: 1.35;
+}
+
+.affiliation {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.intro-rule {
+  width: min(100%, 570px);
+  height: 1px;
+  margin: 18px 0 16px;
+  background: var(--line);
+}
+
+.intro {
+  max-width: 900px;
+  margin: 0;
+  color: #3f2a20;
+  font-size: 1.2rem;
+  line-height: 1.55;
+}
+
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.quick-link {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 9px 17px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 250, 242, 0.68);
+  color: var(--ink);
+  text-decoration: none;
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 1.13rem;
+  font-weight: 600;
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.quick-link:hover,
+.quick-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: var(--white-warm);
+}
+
+.quick-link.primary-link {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fffaf2;
+}
+
+.quick-link.primary-link:hover,
+.quick-link.primary-link:focus-visible {
+  background: var(--accent-dark);
+}
+
+.link-symbol {
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Research interests and update panels */
+
+.lower-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.45fr);
+  align-items: start;
+  gap: 54px;
+  margin-top: 54px;
+}
+
+.lower-section h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.heading-underline {
+  width: 76px;
+  height: 3px;
+  margin: 15px 0 20px;
+  background: var(--accent);
+}
+
+.interest-list,
+.info-panel ul {
+  margin: 0;
+  padding-left: 25px;
+}
+
+.interest-list li {
+  margin: 0 0 10px;
+  padding-left: 4px;
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 1.22rem;
+  line-height: 1.4;
+}
+
+.updates-column {
+  display: grid;
+  gap: 16px;
+}
+
+.info-panel {
+  padding: 21px 26px 22px;
+  border: 1px solid rgba(123, 80, 48, 0.06);
+  border-radius: 17px;
+  box-shadow: 0 4px 16px rgba(75, 43, 25, 0.025);
+}
+
+.upcoming-panel {
+  background: var(--panel-green);
+}
+
+.news-panel {
+  background: var(--panel-peach);
+}
+
+.panel-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.panel-heading h2 {
+  font-size: 1.85rem;
+}
+
+.panel-icon {
+  width: 28px;
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+  font-size: 1.65rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.info-panel li {
+  margin: 0 0 7px;
+  padding-left: 5px;
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 1.2rem;
+  line-height: 1.45;
+}
+
+.info-panel li:last-child {
+  margin-bottom: 0;
+}
+
+/* Footer */
+
+.site-footer {
+  width: min(1320px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 20px 0 28px;
+  border-top: 1px solid var(--line);
+  color: #806b5d;
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Tablet and mobile */
+
+@media (max-width: 1050px) {
+  .nav-wrap {
+    width: min(100% - 40px, 900px);
+    padding: 16px 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+  }
+
+  .main-nav a {
+    padding: 7px 10px;
+    font-size: 1.05rem;
+  }
+
+  .page-container {
+    width: min(100% - 48px, 900px);
+    padding-top: 42px;
+  }
+
+  .profile-section {
+    grid-template-columns: 245px minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .lower-section {
+    gap: 32px;
+  }
+
+  .site-footer {
+    width: min(100% - 48px, 900px);
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 16px;
+  }
+
+  .nav-wrap {
+    width: calc(100% - 32px);
+  }
+
+  .main-nav {
+    gap: 3px;
+  }
+
+  .main-nav a {
+    padding: 6px 8px;
+    font-size: 1rem;
+  }
+
+  .page-container {
+    width: calc(100% - 36px);
+    padding-top: 30px;
+  }
+
+  .profile-section {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .portrait-wrap {
+    width: min(245px, 75%);
+    margin: 0 auto;
+  }
+
+  .profile-content h1 {
+    font-size: 2.55rem;
+  }
+
+  .intro {
+    font-size: 1.08rem;
+  }
+
+  .quick-links {
+    gap: 9px;
+  }
+
+  .quick-link {
+    min-height: 44px;
+    padding: 8px 12px;
+    font-size: 1.03rem;
+  }
+
+  .lower-section {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 42px;
+  }
+
+  .lower-section h2 {
+    font-size: 1.85rem;
+  }
+
+  .info-panel {
+    padding: 19px 19px 20px;
+  }
+
+  .panel-heading h2 {
+    font-size: 1.7rem;
+  }
+
+  .info-panel li,
+  .interest-list li {
+    font-size: 1.12rem;
+  }
+
+  .site-footer {
+    width: calc(100% - 36px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
